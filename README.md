@@ -2,9 +2,9 @@
 
 ## 📌 Overview
 
-This repository provides the implementation of a **Multivariate Spatio-Temporal Transformer (MSTT)** model for high-resolution drought forecasting using Earth Observation (EO) data.
+This repository provides the implementation of a Multivariate Spatio-Temporal Transformer (MSTT) model for high-resolution drought forecasting using Earth Observation (EO) data.
 
-The model is designed to predict the **Standardized Precipitation Index (SPI)** at 1 km spatial resolution by jointly modeling spatial and temporal dependencies from multivariate EO signals.
+The model is designed to predict the Standardized Precipitation Index (SPI) at 1 km spatial resolution by jointly modeling spatial and temporal dependencies from multivariate EO signals.
 
 ---
 
@@ -12,11 +12,11 @@ The model is designed to predict the **Standardized Precipitation Index (SPI)** 
 
 United Arab Emirates (UAE) — a hyper-arid region characterized by:
 
-* low precipitation
-* high evapotranspiration
-* strong spatial heterogeneity
+- low precipitation
+- high evapotranspiration
+- strong spatial heterogeneity
 
-Time period: **2000–2023**
+Time period: 2000–2023
 
 ---
 
@@ -24,15 +24,15 @@ Time period: **2000–2023**
 
 The model integrates the following EO variables:
 
-* **NDVI** (MODIS MOD13A3) → vegetation health
-* **Land Surface Temperature (LST)** (MODIS MOD11A1)
-* **Soil Moisture** (GLDAS NOAH)
-* **SPI (target)** derived from CHIRPS precipitation
+- NDVI (MODIS MOD13A3) → vegetation health
+- Land Surface Temperature (LST) (MODIS MOD11A1)
+- Soil Moisture (GLDAS NOAH)
+- SPI (target) derived from CHIRPS precipitation
 
 All data are:
 
-* harmonized to **1 km resolution**
-* aggregated at **monthly scale**
+- harmonized to **1 km resolution**
+- aggregated at **monthly scale**
 
 ---
 
@@ -42,20 +42,20 @@ The MSTT model is based on a **dual-attention mechanism**:
 
 ### 🔹 Spatial Attention
 
-* captures dependencies between grid cells
-* models geographic interactions
+- captures dependencies between grid cells
+- models geographic interactions
 
 ### 🔹 Temporal Attention
 
-* captures monthly temporal dynamics
-* models short-term and seasonal dependencies
+- captures monthly temporal dynamics
+- models short-term and seasonal dependencies
 
 ### 🔹 Key Features
 
-* multivariate input fusion
-* transformer-based architecture
-* scalable to large EO datasets
-* interpretable via attention mechanisms
+- multivariate input fusion
+- transformer-based architecture
+- scalable to large EO datasets
+- interpretable via attention mechanisms
 
 ---
 
@@ -130,9 +130,8 @@ python src/train.py
 ## 📈 Results
 
 The MSTT model achieves:
-
-* **R² ≈ 0.93**
-* Lower RMSE and MAE compared to:
+- R² ≈ 0.93
+- Lower RMSE and MAE compared to:
 
   * LSTM
   * GRU
